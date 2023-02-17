@@ -4,13 +4,14 @@ import android.annotation.SuppressLint
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 
 
 class MainActivity : AppCompatActivity() {
     //Объявление переменных
-    private var text: String = "В магазине <осталось> 10 банок колы, а <может> и больше"
+    private var text: String = "На дощатой <террасе>, под звуки виолончели <Аполлинария> Николаевна <потчевала> Иннокентия Иннокентьевича <винегретом> и прочими <яствами> и просила сдать ведомости"
     private var tvText: TextView? = null; //Создали переменную для TextView
 
 
@@ -21,6 +22,11 @@ class MainActivity : AppCompatActivity() {
            tvText = findViewById(R.id.tvTextView2) //Связали переменную и компонент
            var subText: String = text.substringAfter('<')
            var subText2: String = subText.substringBefore('>')
+
+           for (n in 0..10) //перебор от 0 до 10
+           {
+               Log.d("MyLog", "N is : " + n)
+           }
             //Отобразить содержимое переменной tvText на компоненте tvTextView2
            tvText?.setText(subText2)
 
