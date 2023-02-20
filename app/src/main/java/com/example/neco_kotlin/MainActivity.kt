@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
     private var tvText: TextView? = null; //Создали переменную для TextView
 
 
+    //Комментарии для ИСИП-22/1
+
        @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
            super.onCreate(savedInstanceState)
